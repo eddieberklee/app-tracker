@@ -1,5 +1,5 @@
-spoonrocket-notify
-==================
+app-tracker
+===========
 
 Notify me when spoonrocket has food for me again.
 
