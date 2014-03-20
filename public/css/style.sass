@@ -1,15 +1,13 @@
 // sass yummy
 
-@include "css3_mixins"
-@include "vspace"
+@import "css3_mixins"
+@import "vspace"
 
 body
 	font-size: 1.45em
 
 .panel
-	-webkit-box-shadow: 0
-	box-shadow: 0
-	@include
+	@include css3-box-shadow-none
 .panel.companies .panel-body
 	padding: 0
 .panel.companies ul.companies
