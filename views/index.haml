@@ -22,80 +22,61 @@
 				%p
 					Icon classes cannot be directly combined with other components. They should not be used along with other classes on the same element. Instead, add a nested.
 
-			%header
-				%nav
-					%ul
-						%li= "About"
-						%li= "Queue"
-						%li= "Share"
-			%section
-				%article
-					%header
+			%button.btn.btn-info.btn-lg{ "data-toggle" => "modal", "data-target" => "#myModal" }
+				Launch Demo Modal
 
-						.alert.alert-success
-							You's a WINNER!
+			%br
+			%br
 
-						%ol.breadcrumb
-							%li
-								%a{ :href => "#" }
-									Home
-							%li
-								%a{ :href => "#" }
-									Library
-							%li{ :class => "active", }
-								Data
+			.modal.fade{ :id => "myModal", :tabindex => "-1", :role => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
+				.modal-dialog
+					.modal-content
+						.modal-header
+							%button{ :type => "button", :class => "close", "data-dismiss" => "modal", "aria-hidden" => "true", :style => "background-color:#ccc;width:32px;height:32px;border-radius:16px;" }
+								%span{ :style => "position:relative;top:-2px;color:#222" }
+									&times;
+							%h4.modal-title#myModalLabel
+								Modal Title
+						.modal-body
+							%button{ :type => "button", :class => "btn btn-default", "data-dismiss" => "modal" }
+								Close
 
-						%button.btn.btn-info.btn-lg{ "data-toggle" => "modal", "data-target" => "#myModal" }
-							Launch Demo Modal
+			.panel.panel-info.companies
+				.panel-heading
+					%h3.panel-title
+						To Apply:
+				.panel-body
+					%ul.companies
+						%li
+							%span
+								Yelp
+						%li
+							%span
+								Eventbrite
+						%li
+							%span
+								Optimizely
 
-						%br
-						%br
+			%span.label.label-danger
+				Beep!
+			
+			%h2= "App Tracker"
+			
+			%input{ :type => "text", :class => "form-control col6", :placeholder => "Enter your email..", }
+			
+			%button{ :type => "button", :class => "btn btn-warning", }
+				Love & Pain
+			
+			%button{ :style => "background-color:orange;width:40px;height:40px;line-height:40px;border-radius:20px;text-align:center;border:0;margin:2px;" }
+				%span{ :class => "glyphicon glyphicon-inbox", :style => "color:white;font-size:1.3em;position:relative;top:3px;left:1px;", }
 
-						.modal.fade{ :id => "myModal", :tabindex => "-1", :role => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
-							.modal-dialog
-								.modal-content
-									.modal-header
-										%button{ :type => "button", :class => "close", "data-dismiss" => "modal", "aria-hidden" => "true", :style => "background-color:#ccc;width:32px;height:32px;border-radius:16px;" }
-											%span{ :style => "position:relative;top:-2px;color:#222" }
-												&times;
-										%h4.modal-title#myModalLabel
-											Modal Title
-									.modal-body
-										%button{ :type => "button", :class => "btn btn-default", "data-dismiss" => "modal" }
-											Close
-
-						.progress
-							.progress-bar.progress-bar-success{ :role => "progressbar", "aria-valuenow" => "40", "aria-valuemin" => "0", "aria-valuemax" => "100", :style => "width: 40%" }
-							%span.sr-only
-								40% Complete
-
-						.panel.panel-info
-							.panel-heading
-								%h3.panel-title
-									Panel Title
-							.panel-body
-								Panel content.
-
-						%span.label.label-danger
-							Beep!
-						
-						%h2= "SpoonRocket Notifier"
-						
-						%input{ :type => "text", :class => "form-control col6", :placeholder => "Enter your email..", }
-						
-						%button{ :type => "button", :class => "btn btn-warning", }
-							Love & Pain
-						
-						%button{ :style => "background-color:orange;width:40px;height:40px;line-height:40px;border-radius:20px;text-align:center;border:0;margin:2px;" }
-							%span{ :class => "glyphicon glyphicon-inbox", :style => "color:white;font-size:1.3em;position:relative;top:3px;left:1px;", }
-
-						.btn-group
-							%button{ :type => "button", :class => "btn btn-success dropdown-toggle", "data-toggle" => "dropdown", }
-								Action
-							%ul.dropdown-menu{ :role => "menu", }
-								%li
-									%a{ :href => "#", }
-										Something
+			.btn-group
+				%button{ :type => "button", :class => "btn btn-success dropdown-toggle", "data-toggle" => "dropdown", }
+					Action
+				%ul.dropdown-menu{ :role => "menu", }
+					%li
+						%a{ :href => "#", }
+							Something
 			%footer
 				%p
 					Copyright 2011 My Name

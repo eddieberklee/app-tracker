@@ -1,4 +1,30 @@
 // sass yummy
 
+@include "css3_mixins"
+@include "vspace"
+
 body
 	font-size: 1.45em
+
+.panel
+	-webkit-box-shadow: 0
+	box-shadow: 0
+	@include
+.panel.companies .panel-body
+	padding: 0
+.panel.companies ul.companies
+	width: 100%
+	height: 100%
+	padding: 0
+	margin: 0
+
+	li
+		width: 100%
+		height: 34px
+		line-height: 34px
+		list-style-type: none
+		background-color: #f0f0f0
+		border-bottom: 1px solid #ddd
+
+		span
+			margin-left: 10px
